@@ -355,7 +355,7 @@ input {}
 
 .stories {
     margin-top: 5.5%;
-    background: url(/img/Rectangle33.jpg) no-repeat top center;
+    background: url(../img/Rectangle33.jpg) no-repeat top center;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.7);
     background-repeat: no-repeat;
