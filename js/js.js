@@ -33,18 +33,57 @@ console.log(
     "обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5 \n",
     "score: 110\n",
 )
-let test = 0
+
 document.addEventListener('DOMContentLoaded', function() {
     if (test === 0) {
         aaaa()
 
     }
-
 });
 let aa, bb, cc
 
+let position = 2
 
+let retorn = 1
 
+function clickLeft1() {
+    --position
+    clickPosition()
+}
+
+function clickRight2() {
+    ++position
+    clickPosition()
+}
+
+function clickPosition() {
+    if (position < 1) {
+        position = 1
+    } else if (position > 3) {
+        position = 3
+    }
+    document.getElementById('clickLeft').style.opacity = ('1')
+    document.getElementById('clickRight').style.opacity = ('1')
+    if (retorn === 1 && position === 1) {
+        document.getElementById('clickLeft').style.opacity = ('0.5')
+        clikFirst()
+    } else if (retorn === 0 && position === 1) {
+        document.getElementById('clickLeft').style.opacity = ('0.5')
+    } else {}
+
+    if (retorn === 1 && position === 2) {
+        clikSecand()
+    } else {}
+
+    if (retorn === 1 && position === 3) {
+        document.getElementById('clickRight').style.opacity = ('0.5')
+        clikTird()
+
+    } else if (retorn === 0 && position === 3) {
+        document.getElementById('clickRight').style.opacity = ('0.5')
+
+    } else {}
+}
 
 function clikFirst() {
     aa = 2
@@ -59,9 +98,10 @@ function clikFirst() {
     document.getElementById("Tird").classList.add("disabled-ball")
     document.getElementById("Secand").classList.remove("active-ball")
     document.getElementById("Tird").classList.remove("active-ball")
-    test = 2
-    console.log(test)
-        // aaaa()
+    position = 1
+    retorn = 0
+    clickPosition()
+    setTimeout(retorn = 1, 1000);
 }
 
 
@@ -78,13 +118,14 @@ function clikSecand() {
     document.getElementById("Tird").classList.add("disabled-ball")
     document.getElementById("Tird").classList.remove("active-ball")
     document.getElementById("First").classList.remove("active-ball")
-    test = 3
-        // aaaa()
+    position = 2
+    retorn = 0
+    clickPosition()
+    setTimeout(retorn = 1, 1000);
 }
 
 
 function clikTird() {
-
     aa = 3
     bb = 1
     cc = 2
@@ -97,22 +138,33 @@ function clikTird() {
     document.getElementById("Secand").classList.add("disabled-ball")
     document.getElementById("First").classList.remove("active-ball")
     document.getElementById("Secand").classList.remove("active-ball")
-    test = 1
-        // aaaa()
+    position = 3
+    retorn = 0
+    clickPosition()
+    setTimeout(retorn = 1, 1000);
 }
 
 
-function aaaa() {
-    if (test === 2) {
-        setTimeout(clikSecand, 6000);
-    } else if (test === 3) {
-        setTimeout(clikTird, 6000);
-    } else if (test === 1) {
-        setTimeout(clikFirst, 6000);
-    } else {}
+let timerId = setInterval(() => {
+    ++position, setlimit(), clickPosition()
+}, 12000);
+
+
+function setlimit() {
+    if (position > 3) { position = 1 }
 }
+
+
 let pageHeight = document.documentElement.scrollHeight
 
+function heightt() {
+    let heightWw = document.getElementById("wrap").scrollHeight;
+    let heightStoris = document.getElementById("storis__back").scrollHeight
+    if (heightWw == heightStoris) {
+        alert(heightWw)
+    } else { document.getElementById('storis__back').style.height = (heightWw + 'px'); }
+
+}
 
 function clikBurger() {
     document.getElementById("menuBurger").classList.toggle("close");
@@ -125,6 +177,4 @@ function clikBurger() {
 
 function height() {
     document.getElementById('shadow').style.height = (pageHeight + 'px');
-
-
 }

@@ -86,21 +86,27 @@
                     <h2>Popular destinations</h2>
                     <div class="destinations__slider">
                         <div class="destinations__arrows">
-                            <img class="destinations__arrow-back" src="imgForPhone/arrow1.svg" alt="arrow-back">
-                            <img class="destinations__arrow-front" src="imgForPhone/arrow.svg" alt="arrow-front">
+                            <img id="clickLeft" onclick="clickLeft1()" class="destinations__arrow-back" src="imgForPhone/arrow1.svg" alt="arrow-back">
+                            <img id="clickRight" onclick="clickRight2()" class="destinations__arrow-front" src="imgForPhone/arrow.svg" alt="arrow-front">
                         </div>
-                        <div onclick="clikFirst()" id="a">
+                        <picture onclick="clikFirst()" id="a">
+                            <source media="(max-width: 950px)" srcset="imgForPhone/Rectangle26.jpg">
+                            <source media="(min-width: 951px)" srcset="img/Rectangle23.jpg">
                             <img class="destinations__imge" src="img/Rectangle23.jpg" alt="Spain">
                             <p>Spain</p>
-                        </div>
-                        <div id="b" onclick="clikSecand()">
+                        </picture>
+                        <picture id="b" onclick="clikSecand()">
+                            <source media="(max-width: 950px)" srcset="imgForPhone/Rectangle34.jpg">
+                            <source media="(min-width: 951px)" srcset="img/Rectangle24.jpg">
                             <img class="destinations__imge" src="img/Rectangle24.jpg" alt="JAPAN">
                             <p>Japan</p>
-                        </div>
-                        <div id="c" onclick="clikTird()">
+                        </picture>
+                        <picture id="c" onclick="clikTird()">
+                            <source media="(max-width: 950px)" srcset="imgForPhone/Rectangle35.jpg">
+                            <source media="(min-width: 951px)" srcset="img/Rectangle25.jpg">
                             <img class="destinations__imge" src="img/Rectangle25.jpg" alt="USA">
                             <p>USA</p>
-                        </div>
+                        </picture>
                     </div>
                     <div class="destinations__point">
                         <button id="Tird" onclick="clikTird()" class="destinations__ball disabled-ball"></button>
@@ -116,72 +122,72 @@
                 </div>
             </section>
             <section id="storis" class="stories">
-                <div class="storis__back"></div>
-                <div class="wrap">
-                    <h2>Travel Stories</h2>
-                    <div class="storis__column">
-                        <div class="storis__row">
-                            <div class="storis__imge">
-                                <img src="" alt="">
-                                <picture>
-                                    <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle15.jpg">
-                                    <source media="(min-width: 887px)" srcset="img/Rectangle29.jpg">
-                                    <img src="img/Rectangle29.jpg" alt="mountains&lake">
-                                </picture>
+                <div id="storis__back" class="storis__back">
+                    <div id="wrap" class="wrap">
+                        <h2>Travel Stories</h2>
+                        <div class="storis__column">
+                            <div class="storis__row">
+                                <div class="storis__imge">
+                                    <picture>
+                                        <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle15.jpg">
+                                        <source media="(min-width: 887px)" srcset="img/Rectangle29.jpg">
+                                        <img src="img/Rectangle29.jpg" alt="mountains&lake">
+                                    </picture>
+                                </div>
+                                <div class="storis__text">
+                                    <h3>10 Photos of Attractive Thailand</h3>
+                                    <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                                </div>
                             </div>
-                            <div class="storis__text">
-                                <h3>10 Photos of Attractive Thailand</h3>
-                                <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                            <div class="storis__row">
+                                <div class="storis__imge">
+                                    <picture>
+                                        <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle16.jpg">
+                                        <source media="(min-width: 887px)" srcset="img/Rectangle30.jpg">
+                                        <img src="img/Rectangle30.jpg" alt="road">
+                                    </picture>
+                                </div>
+                                <div class="storis__text">
+                                    <h3 lang="zxx">Canyonlands National Park, Utah</h3>
+                                    <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                                </div>
+                            </div>
+                            <div class="storis__row">
+                                <div class="storis__imge">
+                                    <picture>
+                                        <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle27.jpg">
+                                        <source media="(min-width: 887px)" srcset="img/Rectangle31.jpg">
+                                        <img src="img/Rectangle31.jpg" alt="mountains">
+                                    </picture>
+                                </div>
+                                <div class="storis__text">
+                                    <h3>I left my heart in the Mountains!</h3>
+                                    <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                                </div>
+                            </div>
+                            <div class="storis__row">
+                                <div class="storis__imge">
+                                    <picture>
+                                        <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle17.jpg">
+                                        <source media="(min-width: 887px)" srcset="img/Rectangle32.jpg">
+                                        <img src="img/Rectangle32.jpg" alt="road">
+                                    </picture>
+                                </div>
+                                <div class="storis__text">
+                                    <h3>The Longest journey in my life!</h3>
+                                    <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="storis__row">
-                            <div class="storis__imge">
-                                <picture>
-                                    <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle16.jpg">
-                                    <source media="(min-width: 887px)" srcset="img/Rectangle30.jpg">
-                                    <img src="img/Rectangle30.jpg" alt="road">
-                                </picture>
-                            </div>
-                            <div class="storis__text">
-                                <h3 lang="zxx">Canyonlands National Park, Utah</h3>
-                                <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
-                            </div>
-                        </div>
-                        <div class="storis__row">
-                            <div class="storis__imge">
-                                <picture>
-                                    <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle27.jpg">
-                                    <source media="(min-width: 887px)" srcset="img/Rectangle31.jpg">
-                                    <img src="img/Rectangle31.jpg" alt="mountains">
-                                </picture>
-                            </div>
-                            <div class="storis__text">
-                                <h3>I left my heart in the Mountains!</h3>
-                                <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
-                            </div>
-                        </div>
-                        <div class="storis__row">
-                            <div class="storis__imge">
-                                <picture>
-                                    <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle17.jpg">
-                                    <source media="(min-width: 887px)" srcset="img/Rectangle32.jpg">
-                                    <img src="img/Rectangle32.jpg" alt="road">
-                                </picture>
-                            </div>
-                            <div class="storis__text">
-                                <h3>The Longest journey in my life!</h3>
-                                <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="storis__btn">
-                        <button class="storis__textBtn">
+                        <div class="storis__btn">
+                            <button class="storis__textBtn">
                             <img src="img/bi_arrow-right.svg" alt="arrow"> See More 
                         </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -212,7 +218,6 @@
         </footer>
         <div onclick="clikBurger()" id="shadow" class="shadow-close"></div>
         <div class="menuBurger">
-
             <div id="menuBurger" class="menuBurger__block close">
                 <div onclick="clikBurger()" class="menuBurger__close">
                     <img src="imgForPhone/close.svg" alt="cross">
