@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel</title>
-    <link rel="shortcut icon" href="img/plane.svg">
-    <link rel="stylesheet" href="./css/my_website.css">
+    <link rel="shortcut icon" href="imeges/favicon-plane.svg">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
             <div class="wrap">
                 <div class="logo">
                     <div class="logo__img">
-                        <img src="img/logo.svg" alt="logo">
+                        <img src="imeges/logo.svg" alt="logo">
                     </div>
                     <div class="logo__text">Travel Portal</div>
                 </div>
@@ -38,20 +38,19 @@
                         </li>
                     </ul>
                 </nav>
-                <div onclick="clikBurger()" class="burger">
+                <div id="burger__line" class="burger">
                     <div class="burger__line"></div>
                     <span class="burger__line"></span>
                     <div class="burger__line"></div>
                 </div>
                 <div class="menu__btn-log">
-                    <button>Login</button>
+                    <button id="Login-BTM">Login</button>
                 </div>
             </div>
         </header>
         <main>
             <section id="preview" class="preview">
                 <div class="wrap">
-                    <p>1</p>
                     <h1 class="preview__title">Explore the beauty of <br> the World</h1>
                     <div class="preview__text">Receive personalized recommendations for countries, hotels, activities and more</div>
                     <div class="preview__row">
@@ -67,15 +66,15 @@
                     <h2 class="steps__title">3 Steps to the perfect trip</h2>
                     <div class="steps__row">
                         <div class="steps__block">
-                            <img class="steps__icicon" src="img/Vector1.svg" alt="bicycle">
+                            <img class="steps__icicon" src="imeges/steps-1.svg" alt="bicycle">
                             <div class="steps__subtitle">Tell us what you want to do</div>
                         </div>
                         <div class="steps__block">
-                            <img class="steps__icicon" src="img/Vector2.svg" alt="calculator">
+                            <img class="steps__icicon" src="imeges/steps-2.svg" alt="calculator">
                             <div class="steps__subtitle">Share us preferable dates </div>
                         </div>
                         <div class="steps__block">
-                            <img class="steps__icicon" src="img/Vector3.svg" alt="plane">
+                            <img class="steps__icicon" src="imeges/steps-3.svg" alt="plane">
                             <div class="steps__subtitle">We will give you recommendations</div>
                         </div>
                     </div>
@@ -86,36 +85,36 @@
                     <h2>Popular destinations</h2>
                     <div class="destinations__slider">
                         <div class="destinations__arrows">
-                            <img id="clickLeft" onclick="clickLeft1()" class="destinations__arrow-back" src="imgForPhone/arrow1.svg" alt="arrow-back">
-                            <img id="clickRight" onclick="clickRight2()" class="destinations__arrow-front" src="imgForPhone/arrow.svg" alt="arrow-front">
+                            <img id="clickLeft" onclick="clickLeft1()" class="destinations__arrow-back" src="imeges/destinations-arrow-left.svg" alt="arrow-back">
+                            <img id="clickRight" onclick="clickRight2()" class="destinations__arrow-front" src="imeges/destinations-arrow-right.svg" alt="arrow-front">
                         </div>
                         <picture onclick="clikFirst()" id="a">
-                            <source media="(max-width: 950px)" srcset="imgForPhone/Rectangle26.jpg">
-                            <source media="(min-width: 951px)" srcset="img/Rectangle23.jpg">
-                            <img class="destinations__imge" src="img/Rectangle23.jpg" alt="Spain">
+                            <source media="(max-width: 950px)" srcset="imeges/slider-1@mv.jpg">
+                            <source media="(min-width: 951px)" srcset="imeges/slider-1.jpg">
+                            <img class="destinations__imge" src="imeges/slider-1.jpg" alt="Spain">
                             <p>Spain</p>
                         </picture>
-                        <picture id="b" onclick="clikSecand()">
-                            <source media="(max-width: 950px)" srcset="imgForPhone/Rectangle34.jpg">
-                            <source media="(min-width: 951px)" srcset="img/Rectangle24.jpg">
-                            <img class="destinations__imge" src="img/Rectangle24.jpg" alt="JAPAN">
+                        <picture id="b" onclick="clikSecond()">
+                            <source media="(max-width: 950px)" srcset="imeges/slider-2@mv.jpg">
+                            <source media="(min-width: 951px)" srcset="imeges/slider-2.jpg">
+                            <img class="destinations__imge" src="imeges/slider-2.jpg" alt="JAPAN">
                             <p>Japan</p>
                         </picture>
-                        <picture id="c" onclick="clikTird()">
-                            <source media="(max-width: 950px)" srcset="imgForPhone/Rectangle35.jpg">
-                            <source media="(min-width: 951px)" srcset="img/Rectangle25.jpg">
-                            <img class="destinations__imge" src="img/Rectangle25.jpg" alt="USA">
+                        <picture id="c" onclick="clikThird()">
+                            <source media="(max-width: 950px)" srcset="imeges/slider-3@mv.jpg">
+                            <source media="(min-width: 951px)" srcset="imeges/slider-3.jpg">
+                            <img class="destinations__imge" src="imeges/slider-3.jpg" alt="USA">
                             <p>USA</p>
                         </picture>
                     </div>
                     <div class="destinations__point">
-                        <button id="Tird" onclick="clikTird()" class="destinations__ball disabled-ball"></button>
-                        <button id="Secand" onclick="clikSecand()" class="destinations__ball active-ball"></button>
-                        <button id="First" onclick="clikFirst()" class="destinations__ball disabled-ball"></button>
+                        <button id="Third" onclick="clikThird()" class="destinations__ball"></button>
+                        <button id="Second" onclick="clikSecond()" class="destinations__ball active-ball"></button>
+                        <button id="First" onclick="clikFirst()" class="destinations__ball"></button>
                     </div>
                     <div class="destinations__btn">
                         <button class="destinations__textBtn">
-                            <img src="img/bi_arrow-right.svg" alt="arrow"> 
+                            <img src="imeges/bi_arrow-right.svg" alt="arrow"> 
                             Find More
                         </button>
                     </div>
@@ -129,98 +128,115 @@
                             <div class="storis__row">
                                 <div class="storis__imge">
                                     <picture>
-                                        <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle15.jpg">
-                                        <source media="(min-width: 887px)" srcset="img/Rectangle29.jpg">
-                                        <img src="img/Rectangle29.jpg" alt="mountains&lake">
+                                        <source media="(max-width: 886px)" srcset="imeges/stories-1@mv.jpg">
+                                        <source media="(min-width: 887px)" srcset="imeges/stories-1.jpg">
+                                        <img src="imeges/stories-1.jpg" alt="mountains&lake">
                                     </picture>
                                 </div>
                                 <div class="storis__text">
                                     <h3>10 Photos of Attractive Thailand</h3>
-                                    <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                                    <div class="storis__text-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                    <div class="storis__more">Read More</div>
                                 </div>
                             </div>
                             <div class="storis__row">
                                 <div class="storis__imge">
                                     <picture>
-                                        <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle16.jpg">
-                                        <source media="(min-width: 887px)" srcset="img/Rectangle30.jpg">
-                                        <img src="img/Rectangle30.jpg" alt="road">
+                                        <source media="(max-width: 886px)" srcset="imeges/stories-2@mv.jpg">
+                                        <source media="(min-width: 887px)" srcset="imeges/stories-2.jpg">
+                                        <img src="imeges/stories-2.jpg" alt="road">
                                     </picture>
                                 </div>
                                 <div class="storis__text">
-                                    <h3 lang="zxx">Canyonlands National Park, Utah</h3>
-                                    <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                                    <h3>Canyonlands National Park, Utah</h3>
+                                    <div class="storis__text-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                    <div class="storis__more">Read More</div>
                                 </div>
                             </div>
                             <div class="storis__row">
                                 <div class="storis__imge">
                                     <picture>
-                                        <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle27.jpg">
-                                        <source media="(min-width: 887px)" srcset="img/Rectangle31.jpg">
-                                        <img src="img/Rectangle31.jpg" alt="mountains">
+                                        <source media="(max-width: 886px)" srcset="imeges/stories-3@mv.jpg">
+                                        <source media="(min-width: 887px)" srcset="imeges/stories-3.jpg">
+                                        <img src="imeges/stories-3.jpg" alt="mountains">
                                     </picture>
                                 </div>
                                 <div class="storis__text">
                                     <h3>I left my heart in the Mountains!</h3>
-                                    <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                                    <div class="storis__text-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    </div>
+                                    <div class="storis__more">Read More</div>
                                 </div>
                             </div>
                             <div class="storis__row">
                                 <div class="storis__imge">
                                     <picture>
-                                        <source media="(max-width: 886px)" srcset="imgForPhone/Rectangle17.jpg">
-                                        <source media="(min-width: 887px)" srcset="img/Rectangle32.jpg">
-                                        <img src="img/Rectangle32.jpg" alt="road">
+                                        <source media="(max-width: 886px)" srcset="imeges/stories-4@mv.jpg">
+                                        <source media="(min-width: 887px)" srcset="imeges/stories-4.jpg">
+                                        <img src="imeges/stories-4.jpg" alt="road">
                                     </picture>
                                 </div>
                                 <div class="storis__text">
                                     <h3>The Longest journey in my life!</h3>
-                                    <p lang="zxx">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a class="storis__link" href="">Read More</a></p>
+                                    <div class="asd">
+                                        <div class="storis__text-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                                mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                            <div class="storis__more">Read More</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="storis__btn">
-                            <button class="storis__textBtn">
-                            <img src="img/bi_arrow-right.svg" alt="arrow"> See More 
+                            <div class="storis__btn">
+                                <button class="storis__textBtn">
+                            <img src="imeges/bi_arrow-right.svg" alt="arrow"> See More 
                         </button>
+                            </div>
                         </div>
                     </div>
-                </div>
             </section>
         </main>
-        <footer>
+        <footer class="footer">
             <div class="wrap">
                 <p class="footer__text">All Rights Reserved © Travel Portal</p>
-                <div class="footer__row">
+                <div class="footer__row" id="social-media">
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="img/Vector.svg" alt="instagram">
+                                <img src="imeges/icons-instagram.svg" alt="instagram">
                             </a>
                         </li>
                         <li>
                             <a class="rs_school" href="https://rs.school/js-stage0/">
-                                <img src="img/rs_school_js.svg" alt="rs_school">
+                                <img src="imeges/rs_school_js.svg" alt="rs_school">
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/kapkande">
-                                <img style="width: 32px;" src="img/github_logo_icon_147285.svg" alt="github">
+                                <img style="width: 32px;" src="imeges/github_logo_icon_147285.svg" alt="github">
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </footer>
-        <div onclick="clikBurger()" id="shadow" class="shadow-close"></div>
+        <div onclick="clikBurger()" id="shadow" class="shadow"></div>
         <div class="menuBurger">
-            <div id="menuBurger" class="menuBurger__block close">
+            <div id="menuBurger" class="menuBurger__block">
                 <div onclick="clikBurger()" class="menuBurger__close">
-                    <img src="imgForPhone/close.svg" alt="cross">
+                    <img src="imeges/cross-close.svg" alt="cross">
                 </div>
                 <ul class="menuBurger__row">
                     <li>
@@ -239,13 +255,57 @@
                         <a onclick="clikBurger()" class="menuBurger__link" href="#">Account</a>
                     </li>
                     <li>
-                        <a onclick="clikBurger()" class="menuBurger__link" href="#">Social Media</a>
+                        <a onclick="clikBurger()" class="menuBurger__link" href="#social-media">Social Media</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <script src="js/js.js"></script>
+        <div class="popup">
+            <div class="popup__wrap">
+                <h3>Log in to your account</h3>
+                <h3 class="onSignUp">Create account</h3>
+                <div class="popup__loginWithOut">
+                    <button class="popup__facebook">
+                        <img src="imeges/Facebook-Logo.svg" alt="Facebook-Logo">
+                        <p>Sign In with Facebook</p>
+                    </button>
+                    <button class="popup__google">
+                        <img src="imeges/Google-Logo.svg" alt="Google-Logo">
+                        <p>Sign In with Google</p>
+                    </button>
+                </div>
+                <div class="popup__or">
+                    <span class="popup__span"></span>
+                    <p>or</p>
+                    <span class="popup__span"></span>
+                </div>
+                <div class="popup__login">
+                    <div class="popup__email">
+                        <label for="popup__email">E-mail</label>
+                        <input type="email" id="popup__email" type="text">
+                    </div>
+                    <div class="popup__password">
+                        <label for="popup__password">Password</label>
+                        <input type="password" id="popup__password" type="text">
+                    </div>
+                    <button class="popup__sing-in">Sing In</button>
+                    <div class="popup__forgot">Forgot Your Password?</div>
+                </div>
+                <span class="popup__span"></span>
+                <div class="popup__footer">
+                    <div class="popup__register">
+                        <p>Don’t have an account?</p>
+                        <p>Register</p>
+                    </div>
+                    <div class="popup__log-in onSignUp">
+                        <p>Already have an account?</p>
+                        <p>Log in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/index.js"></script>
 </body>
 
 </html>
