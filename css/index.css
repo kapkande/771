@@ -734,18 +734,20 @@ button:hover {
         box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
         border-radius: 10px;
         transition: all 1s;
+        display: block;
+        transition: all 1s;
+        margin-right: -200px;
     }
     .menuBurger__open {
         display: block;
         transition: all 1s;
         margin-right: 0;
     }
-    /* asdasdasd */
-    .menuBurger__close {
+    /* .menuBurger__close {
         display: block;
         transition: all 1s;
         margin-right: -200px;
-    }
+    } */
     .menuBurger__row {
         margin: 10px 15px 0 0px;
         display: flex;
@@ -756,7 +758,8 @@ button:hover {
         margin: 0px 0 0px 15px;
         padding: 13px 0 0 0;
     }
-    .menuBurger__link {
+    .menuBurger__link,
+    .menuBurger__open {
         font-family: 'Red Hat Text';
         font-style: normal;
         font-weight: 500;

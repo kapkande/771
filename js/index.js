@@ -165,19 +165,46 @@ const menuBurger = [
 
 function shawow() {
     menuBurger[1].classList.toggle("shadow-open");
-}
-
-function height() {
     menuBurger[1].style.height = (pageHeight + 'px');
 }
 
 
+
+
 const onMenuClick = (even) => {
+    function closeAll() {
+        popup.classList.remove("popup-active")
+        menuBurger[0].classList.remove("menuBurger__open");
+        shawow()
+    }
     const target = even.target;
+    const popup = document.querySelector('.popup');
     const isLogin = ['Login-BTM'].includes(target.id);
-    console.log(isLogin)
+    // const isLinkInMenu = ['menuBurger__link'].includes(target.className);
+    const isBurger = ['burger'].includes(target.parentElement.className);
+    const isShadow = ['shadow'].includes(target.id);
+    const itFotClose = ['menuBurger__link', 'shadow shadow-open', 'menuBurger__imgClose'].includes(target.className);
+    let currentPopup;
+    let currentMenu;
+    console.log(target)
+
+    if (isLogin) {
+
+        shawow()
+        popup.classList.toggle("popup-active")
 
 
+    } else if (isBurger) {
+        menuBurger[0].classList.toggle("menuBurger__open");
+        shawow()
+
+    } else if (itFotClose) {
+        // currentPopup === 1 ? popup.classList.toggle("popup-active") : menuBurger[0].classList.toggle("menuBurger__open");
+        closeAll()
+
+
+
+    }
 }
 
 
@@ -185,9 +212,9 @@ const onMenuClick = (even) => {
 
 const clickMenuBurger = menuBurger[0].addEventListener('click', onMenuClick);
 const clickShadow = menuBurger[1].addEventListener('click', onMenuClick);
-// const onClickAccount = document.querySelectorAll('.menuBurger__link').addEventListener('click', onMenuClick);
+
 const onClickLogin = document.getElementById("Login-BTM").addEventListener('click', onMenuClick);
-const onClickMenuBurger = document.getElementById("burger__line").addEventListener('click', onMenuClick);
+const onClickMenuBurger = document.getElementById("burger-lines").addEventListener('click', onMenuClick);
 
 
 
@@ -198,7 +225,7 @@ const onClickMenuBurger = document.getElementById("burger__line").addEventListen
 // }
 
 // const wrapper = document.querySelector('.wrapper')
-// const popup = document.querySelector('.popup')
+
 
 // const whereI = wrapper.addEventListener('click', function aaa(e) {
 //     popup.addEventListener('click', function aaaa(e) { alert('1') })
