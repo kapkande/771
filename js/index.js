@@ -156,20 +156,10 @@ const menuBurger = [
     document.getElementById("shadow"),
 ]
 
-// function clikBurger() {
-//     menuBurger[0].classList.toggle("open");
-//     shawow()
-//     height()
-
-// }
-
 function shawow() {
     menuBurger[1].classList.toggle("shadow-open");
     menuBurger[1].style.height = (pageHeight + 'px');
 }
-
-
-
 
 const onMenuClick = (even) => {
     function closeAll() {
@@ -180,53 +170,43 @@ const onMenuClick = (even) => {
     const target = even.target;
     const popup = document.querySelector('.popup');
     const isLogin = ['Login-BTM'].includes(target.id);
-    // const isLinkInMenu = ['menuBurger__link'].includes(target.className);
     const isBurger = ['burger'].includes(target.parentElement.className);
     const isShadow = ['shadow'].includes(target.id);
+    const isAccountBTN = ['menuBurger__openAccount'].includes(target.className);
     const itFotClose = ['menuBurger__link', 'shadow shadow-open', 'menuBurger__imgClose'].includes(target.className);
     let currentPopup;
     let currentMenu;
-    console.log(target)
-
-    if (isLogin) {
-
+    console.log(isAccountBTN)
+    if (isBurger || isLogin || isAccountBTN) {
         shawow()
+    }
+    if (isLogin) {
         popup.classList.toggle("popup-active")
-
-
     } else if (isBurger) {
         menuBurger[0].classList.toggle("menuBurger__open");
-        shawow()
 
-    } else if (itFotClose) {
-        // currentPopup === 1 ? popup.classList.toggle("popup-active") : menuBurger[0].classList.toggle("menuBurger__open");
+    } else if (isAccountBTN) {
         closeAll()
-
-
-
+        popup.classList.toggle("popup-active")
+    } else if (itFotClose) {
+        closeAll()
     }
 }
-
-
-
-
 const clickMenuBurger = menuBurger[0].addEventListener('click', onMenuClick);
 const clickShadow = menuBurger[1].addEventListener('click', onMenuClick);
-
 const onClickLogin = document.getElementById("Login-BTM").addEventListener('click', onMenuClick);
 const onClickMenuBurger = document.getElementById("burger-lines").addEventListener('click', onMenuClick);
 
+function clickSingIn(text) {
+    let target1 = event.target;
+    // let isSingIn = document.getElementsByClassName('popup__sing-in')
+    const addEmail = document.getElementById('popup__email')
+    let addPassword = document.getElementById('popup__password')
+    addPassword.innerText = text
+    console.log(addPassword.innerText)
+}
 
+function clickSing(text) {
+    let isSingIn = document.getElementsByClassName('popup__sing-in')
 
-// function onclickAccount() {
-//     .classList.toggle("popup-active");
-//     menuBurger[1].classList.toggle("shadow-open");
-//     const whereI = menuBurger[1].addEventListener('click', shawow)
-// }
-
-// const wrapper = document.querySelector('.wrapper')
-
-
-// const whereI = wrapper.addEventListener('click', function aaa(e) {
-//     popup.addEventListener('click', function aaaa(e) { alert('1') })
-// })
+}
