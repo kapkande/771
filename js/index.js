@@ -198,8 +198,6 @@ const onClickLogin = document.getElementById("Login-BTM").addEventListener('clic
 const onClickMenuBurger = document.getElementById("burger-lines").addEventListener('click', onMenuClick);
 
 function clickSingIn(text) {
-    let target1 = event.target;
-    let isSingIn = document.getElementsByClassName('popup__sing-in')
     const addEmail = document.getElementById('popup__email').value
     let addPassword = document.getElementById('popup__password').value
     
