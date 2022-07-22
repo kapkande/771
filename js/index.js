@@ -199,14 +199,18 @@ const onClickMenuBurger = document.getElementById("burger-lines").addEventListen
 
 function clickSingIn(text) {
     let target1 = event.target;
-    // let isSingIn = document.getElementsByClassName('popup__sing-in')
-    const addEmail = document.getElementById('popup__email')
-    let addPassword = document.getElementById('popup__password')
-    addPassword.innerText = text
-    console.log(addPassword.innerText)
-}
-
-function clickSing(text) {
     let isSingIn = document.getElementsByClassName('popup__sing-in')
-
+    const addEmail = document.getElementById('popup__email').value
+    let addPassword = document.getElementById('popup__password').value
+    
+    if (!addEmail) {
+        alert('error')
+     
+    } else if (!addPassword) {
+        alert('error')
+       
+    } else {alert('your password = ' + addEmail  + '; your email = ' + addPassword)}
+    
+    
 }
+

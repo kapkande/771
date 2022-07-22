@@ -1115,7 +1115,8 @@ button:hover {
     margin: 0 auto;
     position: absolute;
     transition: all 0.9s;
-    top: -200%;
+    top: -200%; 
+    
 }
 
 .popup-active {
