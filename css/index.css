@@ -1102,10 +1102,6 @@ button:hover {
     display: block;
 }
 
-.onSignUp {
-    display: none;
-}
-
 .popup {
     max-width: 650px;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
@@ -1115,8 +1111,9 @@ button:hover {
     margin: 0 auto;
     position: absolute;
     transition: all 0.9s;
-    top: -200%; 
-    
+    top: -200%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .popup-active {
@@ -1241,7 +1238,8 @@ button:hover {
     margin-bottom: 4.9%;
 }
 
-.popup__sing-in {
+.popup__sing-in,
+.popup__sing-up {
     background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
@@ -1269,7 +1267,7 @@ button:hover {
     margin-top: 2%;
 }
 
-.popup__register p {
+.popup__footer p {
     font-family: 'Aleo';
     font-style: normal;
     font-weight: 700;
@@ -1280,7 +1278,7 @@ button:hover {
     display: inline;
 }
 
-.popup__register p:nth-child(2) {
+.popup__footer p:nth-child(2) {
     text-decoration-line: underline;
     color: #0D606F;
     text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
@@ -1293,4 +1291,13 @@ button:hover {
 
 .popup__wrap>span {
     margin: 4% 0 4% 0;
+}
+
+.onSignUp,
+.onSignIn {
+    display: none;
+}
+
+.sign-active {
+    display: block;
 }

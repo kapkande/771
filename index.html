@@ -189,7 +189,7 @@
                                 </div>
                                 <div class="storis__text">
                                     <h3>The Longest journey in my life!</h3>
-                                    <div class="asd">
+                                    <div>
                                         <div class="storis__text-text">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                                                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
@@ -262,9 +262,9 @@
         </div>
         <div class="popup">
             <div class="popup__wrap">
-                <h3>Log in to your account</h3>
+                <h3 class="onSignIn sign-active">Log in to your account</h3>
                 <h3 class="onSignUp">Create account</h3>
-                <div class="popup__loginWithOut">
+                <div class="popup__loginWithOut onSignIn sign-active">
                     <button class="popup__facebook">
                         <img src="imeges/Facebook-Logo.svg" alt="Facebook-Logo">
                         <p>Sign In with Facebook</p>
@@ -274,10 +274,12 @@
                         <p>Sign In with Google</p>
                     </button>
                 </div>
-                <div class="popup__or">
-                    <span class="popup__span"></span>
-                    <p>or</p>
-                    <span class="popup__span"></span>
+                <div class="popup__orLine onSignIn sign-active">
+                    <div class="popup__or">
+                        <span class="popup__span"></span>
+                        <p>or</p>
+                        <span class="popup__span"></span>
+                    </div>
                 </div>
                 <div class="popup__login">
                     <div class="popup__email">
@@ -288,16 +290,17 @@
                         <label for="popup__password">Password</label>
                         <input type="password" id="popup__password" type="text">
                     </div>
-                    <button onclick="clickSingIn()" class="popup__sing-in">Sing In</button>
-                    <div class="popup__forgot">Forgot Your Password?</div>
+                    <button onclick="clickSingIn()" class="popup__sing-in onSignIn sign-active">Sing In</button>
+                    <button onclick="clickSingIn()" class="popup__sing-up onSignUp">Sing Up</button>
+                    <div class="popup__forgot onSignIn sign-active">Forgot Your Password?</div>
                 </div>
-                <span class="popup__span"></span>
+                <span class="popup__span asd"></span>
                 <div class="popup__footer">
-                    <div class="popup__register">
+                    <div onclick="changePopUp()" class="popup__register onSignIn sign-active">
                         <p>Don’t have an account?</p>
                         <p>Register</p>
                     </div>
-                    <div class="popup__log-in onSignUp">
+                    <div onclick="changePopUp()" class="popup__log-in onSignUp">
                         <p>Already have an account?</p>
                         <p>Log in</p>
                     </div>

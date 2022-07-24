@@ -198,17 +198,37 @@ const onClickLogin = document.getElementById("Login-BTM").addEventListener('clic
 const onClickMenuBurger = document.getElementById("burger-lines").addEventListener('click', onMenuClick);
 
 function clickSingIn(text) {
-    const addEmail = document.getElementById('popup__email').value
+    let addEmail = document.getElementById('popup__email').value
     let addPassword = document.getElementById('popup__password').value
-    
-    if (!addEmail) {
-        alert('error')
-     
-    } else if (!addPassword) {
-        alert('error')
-       
-    } else {alert('your password = ' + addEmail  + '; your email = ' + addPassword)}
-    
-    
-}
+    console.log(document.body.value)
+    if (!addEmail & !addPassword) {
+        alert('inputs are empty')
+    } else if (!addEmail) {
+        alert('the input "Email" is empty')
 
+    } else if (!addPassword) {
+        alert('the input "password" is empty')
+
+    } else {
+        alert('your password = ' + addEmail + '; your email = ' + addPassword)
+        addPassword = document.getElementById('popup__password').value = ''
+        addEmail = document.getElementById('popup__email').value = ''
+    }
+
+}
+let onRegisterOrlogin = document.querySelector('.asd').addEventListener('click', changePopUp);
+
+
+function changePopUp() {
+    lengthSignIn = document.querySelectorAll('.onSignIn').length
+    lengthSignUp = document.querySelectorAll('.onSignUp').length
+    for (let i = 0; i < lengthSignIn; i++) {
+        let onSignIn = +document.querySelectorAll('.onSignIn')[i].classList.toggle("sign-active")
+
+    }
+    for (let i = 0; i < lengthSignUp; i++) {
+        let onSignUp = document.querySelectorAll('.onSignUp')[i].classList.toggle("sign-active")
+    }
+
+
+}
