@@ -156,50 +156,78 @@ const menuBurger = [
     document.getElementById("shadow"),
 ]
 
-// function clikBurger() {
-//     menuBurger[0].classList.toggle("open");
-//     shawow()
-//     height()
-
-// }
-
 function shawow() {
     menuBurger[1].classList.toggle("shadow-open");
-}
-
-function height() {
     menuBurger[1].style.height = (pageHeight + 'px');
 }
 
-
 const onMenuClick = (even) => {
+    function closeAll() {
+        popup.classList.remove("popup-active")
+        menuBurger[0].classList.remove("menuBurger__open");
+        shawow()
+    }
     const target = even.target;
+    const popup = document.querySelector('.popup');
     const isLogin = ['Login-BTM'].includes(target.id);
-    console.log(isLogin)
+    const isBurger = ['burger'].includes(target.parentElement.className);
+    const isShadow = ['shadow'].includes(target.id);
+    const isAccountBTN = ['menuBurger__openAccount'].includes(target.className);
+    const itFotClose = ['menuBurger__link', 'shadow shadow-open', 'menuBurger__imgClose'].includes(target.className);
+    let currentPopup;
+    let currentMenu;
+    console.log(isAccountBTN)
+    if (isBurger || isLogin || isAccountBTN) {
+        shawow()
+    }
+    if (isLogin) {
+        popup.classList.toggle("popup-active")
+    } else if (isBurger) {
+        menuBurger[0].classList.toggle("menuBurger__open");
 
+    } else if (isAccountBTN) {
+        closeAll()
+        popup.classList.toggle("popup-active")
+    } else if (itFotClose) {
+        closeAll()
+    }
+}
+const clickMenuBurger = menuBurger[0].addEventListener('click', onMenuClick);
+const clickShadow = menuBurger[1].addEventListener('click', onMenuClick);
+const onClickLogin = document.getElementById("Login-BTM").addEventListener('click', onMenuClick);
+const onClickMenuBurger = document.getElementById("burger-lines").addEventListener('click', onMenuClick);
+
+function clickSingIn(text) {
+    let addEmail = document.getElementById('popup__email').value
+    let addPassword = document.getElementById('popup__password').value
+    console.log(document.body.value)
+    if (!addEmail & !addPassword) {
+        alert('inputs are empty')
+    } else if (!addEmail) {
+        alert('the input "Email" is empty')
+
+    } else if (!addPassword) {
+        alert('the input "password" is empty')
+
+    } else {
+        alert('your password = ' + addEmail + '; your email = ' + addPassword)
+        addPassword = document.getElementById('popup__password').value = ''
+        addEmail = document.getElementById('popup__email').value = ''
+    }
 
 }
 
 
+function changePopUp() {
+    lengthSignIn = document.querySelectorAll('.onSignIn').length
+    lengthSignUp = document.querySelectorAll('.onSignUp').length
+    for (let i = 0; i < lengthSignIn; i++) {
+        let onSignIn = +document.querySelectorAll('.onSignIn')[i].classList.toggle("sign-active")
+
+    }
+    for (let i = 0; i < lengthSignUp; i++) {
+        let onSignUp = document.querySelectorAll('.onSignUp')[i].classList.toggle("sign-active")
+    }
 
 
-const clickMenuBurger = menuBurger[0].addEventListener('click', onMenuClick);
-const clickShadow = menuBurger[1].addEventListener('click', onMenuClick);
-// const onClickAccount = document.querySelectorAll('.menuBurger__link').addEventListener('click', onMenuClick);
-const onClickLogin = document.getElementById("Login-BTM").addEventListener('click', onMenuClick);
-const onClickMenuBurger = document.getElementById("burger__line").addEventListener('click', onMenuClick);
-
-
-
-// function onclickAccount() {
-//     .classList.toggle("popup-active");
-//     menuBurger[1].classList.toggle("shadow-open");
-//     const whereI = menuBurger[1].addEventListener('click', shawow)
-// }
-
-// const wrapper = document.querySelector('.wrapper')
-// const popup = document.querySelector('.popup')
-
-// const whereI = wrapper.addEventListener('click', function aaa(e) {
-//     popup.addEventListener('click', function aaaa(e) { alert('1') })
-// })
+}
